@@ -9,8 +9,6 @@ Also implement SSH key-based authentication for connecting to your Ubuntu server
 1. Generate SSH Key Pair (if not already done)
 First, ensure you have an SSH key pair on your local machine. If you haven't already generated one, you can do so with the following command:
 
-bash
-Copy code
-ssh-keygen -t ed25519
+sudo ssh-keygen -t ed25519
 
-Assign name to the file when promted, so your key can be recognised easiely in case more team members are accessing the server.
+Set name to the new generated file when promted, so your key can be recognised in case more team members are accessing the server.
