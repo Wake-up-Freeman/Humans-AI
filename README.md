@@ -12,3 +12,5 @@ First, ensure you have an SSH key pair on your local machine. If you haven't alr
 sudo ssh-keygen -t ed25519
 
 Set name to the new generated file when promted, so your key can be recognised in case more team members are accessing the server.
+
+For people less familiarized with server management, we recommend to connect at least 2 users from diffreent machines with SSH keys before deactivating password connection in your server.  
