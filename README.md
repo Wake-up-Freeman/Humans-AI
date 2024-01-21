@@ -2,6 +2,8 @@
 
 Basic server set-up security considerations:
 
+The "Holy Trinity: A System Approach to Tendermint-Based Chain Validation" outlines a system approach architecture for operating Tendermint-based blockchain nodes. It emphasizes using a three-node infrastructure comprising a Validator Node, Backup Node, and Relayer Node. The Validator Node is a high-grade hardware dedicated server for block signing. The Backup Node, located in a different data center, handles snapshots and can temporarily become a validator in emergencies. The Relayer Node, which also provides public RPC and API endpoints, is part of a relayer hub and assists in state-sync operations. The approach aims to ensure redundancy, efficient resource utilization, reduced storage bloat, layered monitoring, cost optimization, and automation for effective and reliable blockchain validation operations ( based on this article: https://polkachu.com/blogs/holy-trinity-a-system-approach-to-tendermint-based-chain-validation)
+
 Make sure your Fire Wall is managed all time. It is very simple matter, but represent security RISKs if not managed.
 
 Also implement SSH key-based authentication for connecting to your Ubuntu server. You will need to install your public key on the server and configure SSH to use key-based authentication. 
