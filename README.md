@@ -17,9 +17,10 @@ sudo ssh-keygen -t ed25519
 
    sudo ssh-copy-id -i ~/.ssh/your_custom_key_name.pub USER@YOUR_SERVER_IP
 
-Noticed that after ssf-keygen was executed in your client PC, at least 2 files were generated (sometime more), with your pub and private key pair. Notice that only one of the file has .pub extension (THIS IS THE .
+Noticed that after ssf-keygen was executed in your client PC, at least 2 files were generated (sometime more), with your pub and private key pair. Notice that only one of the files has .pub extension (THIS IS THE public KEY that must be installed in the server. The other HALF of the KEY (private one) must be held with care. Connect with authorized admin person within your VALIDATION GROUP.
 
-Also, we recommend to connect at least 2 users from diffreent machines with SSH keys before deactivating password connection in your server.  
-PUBLIC KEY that needs to be installed on the server. Once your public key is installed on the server, you should be able to connect with: 
+Also, we recommend to connect at least 2 users from diffreent machines with SSH keys before deactivating password connection in your server. Remember that your PUBLIC KEY needs to be installed on the server first before you connect. Once your public key is installed on the server, you should be able to connect wih command: 
 
-sudo ssh -i ~/.ssh/YOUR_PRIVATE_KEY USER@YOUR_SERVER_IP
+sudo ssh -i ~/.ssh/YOUR_PRIVATE_KEY  -p PORT USER@YOUR_SERVER_IP
+
+Please notice PORT = 4 digits of the specific port in your server, that was made available insead of standard port 22.
